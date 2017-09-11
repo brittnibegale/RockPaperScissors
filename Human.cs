@@ -16,10 +16,10 @@ namespace RockPaperScissorsLizardSpock
 
         public override int GetPlayersChoice()
         {
-            Console.WriteLine(name + " What is your your first move? Please choose one number. ");
+            Console.WriteLine(name + " , What is your your move? Please choose one number. ");
             allPlayersChoices.ForEach(Console.WriteLine);
             while (!int.TryParse(Console.ReadLine(), out playersChoice))
-                Console.WriteLine("Please enter a number 1 - 5 " + allPlayersChoices);
+                Console.WriteLine("Please, enter a number 1 - 5 " + allPlayersChoices);
             
             return playersChoice;
         }

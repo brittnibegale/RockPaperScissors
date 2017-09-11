@@ -23,7 +23,7 @@ namespace RockPaperScissorsLizardSpock
 
         public void GivePlayersRules()
         {
-            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! It's simailar to Rock, Paper, Scissors; but with a twist. Here are the rules: \n Scissors cuts Paper \n Paper covers Rock \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock \n Let's find out who the winner of best 2 out of 3 games will be! Hit enter to continue.");
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! It's simailar to Rock, Paper, Scissors; but with a twist. Here are the rules: \n Scissors cuts Paper \n Paper covers Rock \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock \n Let's find out who the winner of best 2 out of 3 games will be! \n Hit ENTER to continue.");
             Console.ReadLine();
         }
 
@@ -53,7 +53,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else
             {
-                Console.WriteLine("Sorry, we did not recognize the number of players playing. Let's try going back to entering how many people are playing. Please, hit the enter key.");
+                Console.WriteLine("Sorry, we did not recognize the number of players playing. Let's try going back to entering how many people are playing. Please, hit the ENTER key.");
                 FindHowManyPlayers();
             }
         }
@@ -109,13 +109,13 @@ namespace RockPaperScissorsLizardSpock
             }
             else
             {
-                Console.WriteLine("The current score is: " + player1.name + " has won: " + player1.winCount + " game(s) and " + player2.name + " has won: " + player2.winCount + " game(s)");
+                Console.WriteLine("The current score is: " + player1.name + " has won: " + player1.winCount + " game(s) and " + player2.name + " has won: " + player2.winCount + " game(s). Hit ENTER to play the next game.");
                 Console.ReadLine();
-                NextGame();
+                PlayNextGame();
             }
         }
 
-        public void NextGame()
+        public void PlayNextGame()
         {
             player1.GetPlayersChoice();
             player2.GetPlayersChoice();
