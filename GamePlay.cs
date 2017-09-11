@@ -93,7 +93,7 @@ namespace RockPaperScissorsLizardSpock
 
         public void CheckForWinner()
         {
-            if(player1.winCount == 3)
+            if(player1.winCount == 2)
             {
                 Console.WriteLine(player1.name + " wins! Would you like to play again? yes or no");
                 string yesOrNo = Console.ReadLine().ToLower();
@@ -101,7 +101,7 @@ namespace RockPaperScissorsLizardSpock
 
 
             }
-            else if (player2.winCount == 3)
+            else if (player2.winCount == 2)
             {
                 Console.WriteLine(player2.name + " wins! Would you like to play again? yes or no");
                 string yesOrNo = Console.ReadLine().ToLower();
