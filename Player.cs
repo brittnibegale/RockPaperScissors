@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    public class Player
+    public abstract class Player
     {
         public string name;
         public int playersChoice;
@@ -26,17 +26,11 @@ namespace RockPaperScissorsLizardSpock
             allPlayersChoices.Add("5.Spock");
 
         }
-        public virtual int GetPlayersChoice()
-        {
-            int playersChoice = 1993;
-            return playersChoice;
-        }
+        public abstract int GetPlayersChoice();
 
-        public virtual string SetPlayersName()
-        {
-            string name = "Name";
-            return name;
-        }
+
+        public abstract string SetPlayersName();
+        
 
     }
     

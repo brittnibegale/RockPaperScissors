@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    public class GamePlay
+    public class Game
     {
-        //string playerChoice;
         Player player1;
         Player player2;
 
