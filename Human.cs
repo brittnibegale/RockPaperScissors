@@ -10,21 +10,27 @@ namespace RockPaperScissorsLizardSpock
     {
         public Human()
         {
-            GetPlayersName();
+           this.name =  SetPlayersName();
         }
 
 
-        public override int GetPlayersChoice(List<string> allPlayerChoice)
+        public override int GetPlayersChoice()
         {
-
+            Console.WriteLine(name + " What is your your first move? Please choose one number. ");
+            allPlayersChoices.ForEach(Console.WriteLine);
+            while (!int.TryParse(Console.ReadLine(), out playersChoice))
+                Console.WriteLine("Please enter a number 1 - 5 " + allPlayersChoices);
+            
             return playersChoice;
         }
 
-        public override string GetPlayersName()
+        public override string SetPlayersName()
         {
             Console.WriteLine("Player, What is your name?");
             string name = Console.ReadLine();
             return name;
         }
+
+      
     }
 }

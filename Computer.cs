@@ -8,19 +8,20 @@ namespace RockPaperScissorsLizardSpock
 {
     public class Computer : Player
     {
-        int randomChoice;
+        
         public Computer()
         {
-            GetPlayersName();
+            this.name = SetPlayersName();
         }
 
-        public override int GetPlayersChoice(List<string> allPlayerChoice)
+        public override int GetPlayersChoice()
         {
-
-            return randomChoice;
+            Random choice = new Random();
+            playersChoice = choice.Next(1, 6);
+            return playersChoice;
         }
 
-        public override string GetPlayersName()
+        public override string SetPlayersName()
         {
             string name = "Computer";
             return name;
