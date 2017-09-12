@@ -132,7 +132,7 @@ namespace RockPaperScissorsLizardSpock
                 }
                 else if (yesOrNo == "no")
                 {
-                    Console.WriteLine("I hope you enjoied playing this game!");
+                    Console.WriteLine("I hope you enjoyed playing this game!");
                     Console.ReadLine();
                 }
                 else
