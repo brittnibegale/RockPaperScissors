@@ -8,6 +8,7 @@ namespace RockPaperScissorsLizardSpock
 {
     public class Human: Player
     {
+        string userInput;
         public Human()
         {
            this.name =  SetPlayersName();
@@ -18,9 +19,14 @@ namespace RockPaperScissorsLizardSpock
         {
             Console.WriteLine(name + " , What is your your move? Please choose one number. ");
             allPlayersChoices.ForEach(Console.WriteLine);
-            while (!int.TryParse(Console.ReadLine(), out playersChoice))
-                Console.WriteLine("Please, enter a number 1 - 5 " + allPlayersChoices);
-            
+            userInput = Console.ReadLine();
+            while (!int.TryParse(userInput, out playersChoice) || playersChoice < 0 || playersChoice > 5)
+            {
+                Console.WriteLine("Invaild input. Please, enter a number 1 - 5 ");
+                allPlayersChoices.ForEach(Console.WriteLine);
+                userInput = Console.ReadLine();
+            }
+
             return playersChoice;
         }
 

@@ -124,16 +124,22 @@ namespace RockPaperScissorsLizardSpock
 
         public void PlayAgain(string yesOrNo)
         {
-            while (yesOrNo != "yes" || yesOrNo != "no")
-                Console.WriteLine("Invalid answer. Would you like to play again? yes or no");
-
-            if (yesOrNo == "yes")
+            while (true)
             {
-                PlayGame();
-            }
-            else
-            {
-                Console.WriteLine("I hope you enjoied playing this game!");
+                if (yesOrNo == "yes")
+                {
+                    PlayGame();
+                }
+                else if (yesOrNo == "no")
+                {
+                    Console.WriteLine("I hope you enjoied playing this game!");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Invalid answer. Would you like to play again? yes or no");
+                    yesOrNo = Console.ReadLine();
+                }
             }
         }
 
